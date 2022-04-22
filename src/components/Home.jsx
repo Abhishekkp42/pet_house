@@ -1,11 +1,13 @@
 import axios from "axios"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { addPetHouse } from "../Redux/action";
 
 export const Home = () => {
+
+	const [sortedData, setSortedData] = useState({parameter: "", value:""})
 
 	const dispatch = useDispatch();
 	const redux_data= useSelector((store) => {
@@ -29,11 +31,15 @@ export const Home = () => {
 		})
 	}
 
+	const handleSort = (parameter, value) => {
+		setSortedData({parameter, value})
+	}
 
 
 
 	const Table = styled.table`
-	margin:auto
+	margin:auto;
+	padding-top: 50px
 	`
 	const Th = styled.th`
 	border: 2px solid red;
@@ -45,7 +51,14 @@ export const Home = () => {
 	padding-right: 50px;
 	`
 
-	return <Table >
+	return <div>
+		<button onClick={() => handleSort("cost", 1)}>CostLow to High</button>
+		<button onClick={() => handleSort("cost", -1)}>Cost High to Low</button>
+
+		<button onClick={() => handleSort("rating", 1)}>Rating Low to High</button>
+		<button onClick={() => handleSort("rating", -1)}>Rating High to Low</button>
+
+	<Table >
 		<thead>
 			<tr >
 				<Th>Sl No.</Th>
@@ -59,7 +72,27 @@ export const Home = () => {
 			</tr>
 		</thead>
 		<tbody >
-			{redux_data.map((el) => {
+			{redux_data
+			.sort((a,b) => {
+				if(sortedData.parameter=="cost" && sortedData.value== 1)
+				{
+					return a["cost"] - b["cost"]
+				}
+
+				else if(sortedData.parameter=="cost" && sortedData.value== -1)
+				{
+					return b.cost - a.cost
+				}
+				else if(sortedData.parameter=="rating" && sortedData.value== 1)
+				{
+					return a.rating - b.rating
+				}
+				else if(sortedData.parameter=="rating" && sortedData.value== -1)
+				{
+					return b.rating - a.rating
+				}
+			})
+			.map((el) => {
 				
 				return (
 					<tr key={el.id} >
@@ -81,4 +114,5 @@ export const Home = () => {
 			})}
 		</tbody>
 	</Table>
+	</div>
 }

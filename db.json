@@ -11,33 +11,33 @@
       "id": 1
     },
     {
-      "name": "xyz",
+      "name": "zzz",
       "city": "Dhanbad",
       "address": "House no 16/c",
       "capacity": "200",
-      "cost": "1000",
+      "cost": "800",
       "verified": "yes",
-      "rating": "4",
+      "rating": "3.5",
       "id": 2
     },
     {
-      "name": "xyz",
+      "name": "xxx",
       "city": "Dhanbad",
       "address": "House no 16/c",
       "capacity": "200",
-      "cost": "1000",
+      "cost": "500",
       "verified": "yes",
-      "rating": "4",
+      "rating": "4.2",
       "id": 3
     },
     {
-      "name": "xyz",
+      "name": "yyy",
       "city": "Dhanbad",
       "address": "House no 16/c",
       "capacity": "200",
-      "cost": "1000",
+      "cost": "2000",
       "verified": "yes",
-      "rating": "4",
+      "rating": "4.6",
       "id": 4
     }
   ]
