@@ -1,0 +1,44 @@
+{
+  "pethouse": [
+    {
+      "name": "xyz",
+      "city": "Dhanbad",
+      "address": "House no 16/c",
+      "capacity": "200",
+      "cost": "1000",
+      "verified": "yes",
+      "rating": "4",
+      "id": 1
+    },
+    {
+      "name": "xyz",
+      "city": "Dhanbad",
+      "address": "House no 16/c",
+      "capacity": "200",
+      "cost": "1000",
+      "verified": "yes",
+      "rating": "4",
+      "id": 2
+    },
+    {
+      "name": "xyz",
+      "city": "Dhanbad",
+      "address": "House no 16/c",
+      "capacity": "200",
+      "cost": "1000",
+      "verified": "yes",
+      "rating": "4",
+      "id": 3
+    },
+    {
+      "name": "xyz",
+      "city": "Dhanbad",
+      "address": "House no 16/c",
+      "capacity": "200",
+      "cost": "1000",
+      "verified": "yes",
+      "rating": "4",
+      "id": 4
+    }
+  ]
+}
